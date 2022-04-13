@@ -9,7 +9,7 @@ FerLevel    = int(input("\nFeraligatr's Level: "))
 SDef        = int(input("Special Defense: "))
 Etype       = str(input("Enemy Type: "))
 badge       = int(input("\nGeneration: "))
-weather     = str(input("Weather: "))
+weather     = int(input("[1] Beneficial [2] Against [3] Normal \nWeather: "))
 target      = int(input("Target/s: "))
 
 
@@ -22,11 +22,11 @@ def modifier (target, weather, badge, Ptype, Stype, Etype):
         target = .5
 
     # WEATHER
-    if weather == "beneficial":
+    if weather == 1:
         weather = 1.5
-    if weather == "against":
+    if weather == 2:
         weather = 0.5
-    if weather == "normal":
+    if weather == 3:
         weather = 1
 
     # BADGE
